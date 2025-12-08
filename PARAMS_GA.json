@@ -1,0 +1,12 @@
+{
+    "timelimit": 100,
+    "instancename": "instance_real_1",
+    "INSTANCE_FROM_FILE" : true,
+    "params_from_params_file": false,
+    "folder_input": "instance_real",  
+    "folder_output": "results_ga",
+    "delta": 0.7,
+    "B" : 9000,
+    "maxIterations" : 30,
+    "comments": "algotype GA; params_from_params_file true delta and B are from params file; instancename: instance_real_2"
+}

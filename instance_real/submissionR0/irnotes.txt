@@ -1,0 +1,7 @@
+-- note file excel
+Budget è espresso in migliaia di euro
+il costo di installazione k è moltiplicato per la capacità della facility
+modificata def maxCO2(self) per abbassare E_0, altrimenti non sono indotti investimenti.
+
+istanza reale 1 epsilon = 0.1
+istanza reale 2 epsilon = 0.2

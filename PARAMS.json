@@ -1,0 +1,15 @@
+{
+    "maxtime": 100,
+    "maxtimetotal": 600,
+    "algotype": "bisection",
+    "instancename": "instance_real_1_clustered",
+    "INSTANCE_FROM_FILE" : true,
+    "params_from_params_file": false,
+    "folder_input": "instance_real",  
+    "folder_output": "instance_real/1_clustered",
+    "delta": 0.7,
+    "B" : 9000,
+    "maxIterations" : 10,
+    "epsilon_ratio": 0.1,
+    "comments": "algotype bisection or N SGAII or LAGRANGIAN; params_from_params_file true delta and B are from params file; instancename: instance_real_2"
+}

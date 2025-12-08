@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f7d4ea7454caeb5e69858c8a36530e4b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 200px; height: 150px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.85;">
+     &nbsp; <i class="fa fa-industry fa-2x" style="color:blue"></i>&nbsp; Facilities<br>
+     &nbsp; <i class="fa fa-truck fa-2x" style="color:green"></i>&nbsp; Suppliers<br>
+</div>
+    
+            <div class="folium-map" id="map_f7d4ea7454caeb5e69858c8a36530e4b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f7d4ea7454caeb5e69858c8a36530e4b = L.map(
+                "map_f7d4ea7454caeb5e69858c8a36530e4b",
+                {
+                    center: [30.0, 100.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cf5c36a998811c76feecc5f65cf1211a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var marker_e5f38ba94aa9e9f71f12dedb35d68f2c = L.marker(
+                [49.4097, 11.4644],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_b7f5f50bcbc54c9311bc313fec651c54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e5f38ba94aa9e9f71f12dedb35d68f2c.setIcon(icon_b7f5f50bcbc54c9311bc313fec651c54);
+        
+    
+        var popup_2f81d552ecdb916d788209d31dbe404c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da5145e387e8886a5bc6b74f984bb3b0 = $(`<div id="html_da5145e387e8886a5bc6b74f984bb3b0" style="width: 100.0%; height: 100.0%;">Facility F1 (Germany)</div>`)[0];
+                popup_2f81d552ecdb916d788209d31dbe404c.setContent(html_da5145e387e8886a5bc6b74f984bb3b0);
+            
+        
+
+        marker_e5f38ba94aa9e9f71f12dedb35d68f2c.bindPopup(popup_2f81d552ecdb916d788209d31dbe404c)
+        ;
+
+        
+    
+    
+            var marker_4d983555d2b4fd79a6907bf23ceae9bb = L.marker(
+                [37.9387, 11.4897],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_71e2e5b2c03fdffbf81edc63870a0fa4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4d983555d2b4fd79a6907bf23ceae9bb.setIcon(icon_71e2e5b2c03fdffbf81edc63870a0fa4);
+        
+    
+        var popup_e029d1b65161ca475494d63eef2a1896 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1751548fe67438a2daaa0726c0a36ca9 = $(`<div id="html_1751548fe67438a2daaa0726c0a36ca9" style="width: 100.0%; height: 100.0%;">Facility F2 (Italy)</div>`)[0];
+                popup_e029d1b65161ca475494d63eef2a1896.setContent(html_1751548fe67438a2daaa0726c0a36ca9);
+            
+        
+
+        marker_4d983555d2b4fd79a6907bf23ceae9bb.bindPopup(popup_e029d1b65161ca475494d63eef2a1896)
+        ;
+
+        
+    
+    
+            var marker_c9df4311df553794e50d84c677a78f8b = L.marker(
+                [38.796, -3.483],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_9b749129960d4e847ce70ceb6fa95621 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c9df4311df553794e50d84c677a78f8b.setIcon(icon_9b749129960d4e847ce70ceb6fa95621);
+        
+    
+        var popup_5c4d6f669bb9c7868cb0bcfb84d04d69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5925ad24f5d200eede9a8cf75ace1d54 = $(`<div id="html_5925ad24f5d200eede9a8cf75ace1d54" style="width: 100.0%; height: 100.0%;">Facility F3 (Spain)</div>`)[0];
+                popup_5c4d6f669bb9c7868cb0bcfb84d04d69.setContent(html_5925ad24f5d200eede9a8cf75ace1d54);
+            
+        
+
+        marker_c9df4311df553794e50d84c677a78f8b.bindPopup(popup_5c4d6f669bb9c7868cb0bcfb84d04d69)
+        ;
+
+        
+    
+    
+            var marker_e490bbb43857209a6d362df49a340690 = L.marker(
+                [54.422, 11.9685],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_68531c46ab23c94f6afc1876063796f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e490bbb43857209a6d362df49a340690.setIcon(icon_68531c46ab23c94f6afc1876063796f5);
+        
+    
+        var popup_e0a6feb1403c2b46c9e9afb676fbd4fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_304116300f31882fe1c0009daec62ee5 = $(`<div id="html_304116300f31882fe1c0009daec62ee5" style="width: 100.0%; height: 100.0%;">Facility F4 (Germany)</div>`)[0];
+                popup_e0a6feb1403c2b46c9e9afb676fbd4fe.setContent(html_304116300f31882fe1c0009daec62ee5);
+            
+        
+
+        marker_e490bbb43857209a6d362df49a340690.bindPopup(popup_e0a6feb1403c2b46c9e9afb676fbd4fe)
+        ;
+
+        
+    
+    
+            var marker_ceab200f9c2118ef8d4ccd0ece2450b7 = L.marker(
+                [17.7759, 99.1474],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_3f04aa5b97cd7345b1abac4727ae8028 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ceab200f9c2118ef8d4ccd0ece2450b7.setIcon(icon_3f04aa5b97cd7345b1abac4727ae8028);
+        
+    
+        var popup_05048923aa3a7c573fcb50a0bb367c54 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b35017a4768d8a3392f1166ff99b2c0e = $(`<div id="html_b35017a4768d8a3392f1166ff99b2c0e" style="width: 100.0%; height: 100.0%;">Facility F5 (Thailand)</div>`)[0];
+                popup_05048923aa3a7c573fcb50a0bb367c54.setContent(html_b35017a4768d8a3392f1166ff99b2c0e);
+            
+        
+
+        marker_ceab200f9c2118ef8d4ccd0ece2450b7.bindPopup(popup_05048923aa3a7c573fcb50a0bb367c54)
+        ;
+
+        
+    
+    
+            var marker_2e7830a1e55320f14923a4dbb3523fe8 = L.marker(
+                [9.0828, 99.0563],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_cd8bdb969b8eec1c00ceb6bb9c10b9e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2e7830a1e55320f14923a4dbb3523fe8.setIcon(icon_cd8bdb969b8eec1c00ceb6bb9c10b9e5);
+        
+    
+        var popup_567575a610c1257e9b0177672679d240 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df3f292d2a8b445dd34683c7d50b8f32 = $(`<div id="html_df3f292d2a8b445dd34683c7d50b8f32" style="width: 100.0%; height: 100.0%;">Facility F6 (Thailand)</div>`)[0];
+                popup_567575a610c1257e9b0177672679d240.setContent(html_df3f292d2a8b445dd34683c7d50b8f32);
+            
+        
+
+        marker_2e7830a1e55320f14923a4dbb3523fe8.bindPopup(popup_567575a610c1257e9b0177672679d240)
+        ;
+
+        
+    
+    
+            var marker_69bcbf8f377ec2eb690bb10325cb3174 = L.marker(
+                [36.8416, 128.3279],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_4158ec76bf623506c6cf38a1423e3d04 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_69bcbf8f377ec2eb690bb10325cb3174.setIcon(icon_4158ec76bf623506c6cf38a1423e3d04);
+        
+    
+        var popup_8bc91c5edc63c10468e69468cf8d39e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_458f54d5bc7794c472727569e5305957 = $(`<div id="html_458f54d5bc7794c472727569e5305957" style="width: 100.0%; height: 100.0%;">Facility F7 (South Korea)</div>`)[0];
+                popup_8bc91c5edc63c10468e69468cf8d39e5.setContent(html_458f54d5bc7794c472727569e5305957);
+            
+        
+
+        marker_69bcbf8f377ec2eb690bb10325cb3174.bindPopup(popup_8bc91c5edc63c10468e69468cf8d39e5)
+        ;
+
+        
+    
+    
+            var marker_b0affc313a068681850d5e2ea8845f07 = L.marker(
+                [42.8807, -4.1236],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_70595e382c17032f22d70ec36ba2c1a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b0affc313a068681850d5e2ea8845f07.setIcon(icon_70595e382c17032f22d70ec36ba2c1a8);
+        
+    
+        var popup_04daacb6fba471b82835bafb9605e3cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a4c4eb9208daa1d41f8c176b8d7823c0 = $(`<div id="html_a4c4eb9208daa1d41f8c176b8d7823c0" style="width: 100.0%; height: 100.0%;">Facility F8 (Spain)</div>`)[0];
+                popup_04daacb6fba471b82835bafb9605e3cf.setContent(html_a4c4eb9208daa1d41f8c176b8d7823c0);
+            
+        
+
+        marker_b0affc313a068681850d5e2ea8845f07.bindPopup(popup_04daacb6fba471b82835bafb9605e3cf)
+        ;
+
+        
+    
+    
+            var marker_3cfdeeb66256fd24fe56664f4ed39404 = L.marker(
+                [41.8922, 127.395],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_b5cce543d6abf720239eea284a96e5aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3cfdeeb66256fd24fe56664f4ed39404.setIcon(icon_b5cce543d6abf720239eea284a96e5aa);
+        
+    
+        var popup_25f60ab22bd81053fa43afbbd0203617 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a6627e3ca61a36db365c771b809384ca = $(`<div id="html_a6627e3ca61a36db365c771b809384ca" style="width: 100.0%; height: 100.0%;">Facility F9 (Japan)</div>`)[0];
+                popup_25f60ab22bd81053fa43afbbd0203617.setContent(html_a6627e3ca61a36db365c771b809384ca);
+            
+        
+
+        marker_3cfdeeb66256fd24fe56664f4ed39404.bindPopup(popup_25f60ab22bd81053fa43afbbd0203617)
+        ;
+
+        
+    
+    
+            var marker_fbc473f8c07d3ad2e01b856fefd203cc = L.marker(
+                [29.3958, 120.6588],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_eb48639c8dbb2ea8d25d2a2033b18c8f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_fbc473f8c07d3ad2e01b856fefd203cc.setIcon(icon_eb48639c8dbb2ea8d25d2a2033b18c8f);
+        
+    
+        var popup_8d4b0b81cd13ecd39c308f2ce91b5a27 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc4ee0195710d642e928b52e75a03e14 = $(`<div id="html_bc4ee0195710d642e928b52e75a03e14" style="width: 100.0%; height: 100.0%;">Facility F10 (China)</div>`)[0];
+                popup_8d4b0b81cd13ecd39c308f2ce91b5a27.setContent(html_bc4ee0195710d642e928b52e75a03e14);
+            
+        
+
+        marker_fbc473f8c07d3ad2e01b856fefd203cc.bindPopup(popup_8d4b0b81cd13ecd39c308f2ce91b5a27)
+        ;
+
+        
+    
+    
+            var marker_02488dcbbff041fa09a0f1a4954a174e = L.marker(
+                [38.3964, 128.1479],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_ce941a5675657d12d2ffb14b81c97184 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_02488dcbbff041fa09a0f1a4954a174e.setIcon(icon_ce941a5675657d12d2ffb14b81c97184);
+        
+    
+        var popup_cb352455769d863bd68ef18e947ec0ef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a614c3ac60e838b1bbca5e4ede86458e = $(`<div id="html_a614c3ac60e838b1bbca5e4ede86458e" style="width: 100.0%; height: 100.0%;">Supplier S1 (South Korea)</div>`)[0];
+                popup_cb352455769d863bd68ef18e947ec0ef.setContent(html_a614c3ac60e838b1bbca5e4ede86458e);
+            
+        
+
+        marker_02488dcbbff041fa09a0f1a4954a174e.bindPopup(popup_cb352455769d863bd68ef18e947ec0ef)
+        ;
+
+        
+    
+    
+            var marker_c1be843960d4252b4a80e3c12da0ad18 = L.marker(
+                [22.914, 111.3636],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_a352d5c52bfe2efdad9a07655ea72de9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c1be843960d4252b4a80e3c12da0ad18.setIcon(icon_a352d5c52bfe2efdad9a07655ea72de9);
+        
+    
+        var popup_3820c26faeb36046437a4cceadae2454 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df03a01c03264882e9c6763371579b32 = $(`<div id="html_df03a01c03264882e9c6763371579b32" style="width: 100.0%; height: 100.0%;">Supplier S2 (China)</div>`)[0];
+                popup_3820c26faeb36046437a4cceadae2454.setContent(html_df03a01c03264882e9c6763371579b32);
+            
+        
+
+        marker_c1be843960d4252b4a80e3c12da0ad18.bindPopup(popup_3820c26faeb36046437a4cceadae2454)
+        ;
+
+        
+    
+    
+            var marker_73ae60bc9c86be4d8d73eaa76529c3de = L.marker(
+                [31.2304, 121.4737],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_a1309ea17358e3bee2cf7b3f7bfe1a4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_73ae60bc9c86be4d8d73eaa76529c3de.setIcon(icon_a1309ea17358e3bee2cf7b3f7bfe1a4d);
+        
+    
+        var popup_c042a1c7d6c4f93e6a31d6d0a9850d63 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3aa01b26f52108dde3a1943d79736548 = $(`<div id="html_3aa01b26f52108dde3a1943d79736548" style="width: 100.0%; height: 100.0%;">Supplier S3 (China)</div>`)[0];
+                popup_c042a1c7d6c4f93e6a31d6d0a9850d63.setContent(html_3aa01b26f52108dde3a1943d79736548);
+            
+        
+
+        marker_73ae60bc9c86be4d8d73eaa76529c3de.bindPopup(popup_c042a1c7d6c4f93e6a31d6d0a9850d63)
+        ;
+
+        
+    
+    
+            var marker_05a9d4a85ffbc57b9e04d60eb967271c = L.marker(
+                [49.1068, 20.1414],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_117daa856a1e08200954f1dcaebebfd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_05a9d4a85ffbc57b9e04d60eb967271c.setIcon(icon_117daa856a1e08200954f1dcaebebfd1);
+        
+    
+        var popup_99c53d5bd33d20c12d4d49f54abcfd43 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af31313603fe9786d760b2dba0d862f7 = $(`<div id="html_af31313603fe9786d760b2dba0d862f7" style="width: 100.0%; height: 100.0%;">Supplier S4 (Poland)</div>`)[0];
+                popup_99c53d5bd33d20c12d4d49f54abcfd43.setContent(html_af31313603fe9786d760b2dba0d862f7);
+            
+        
+
+        marker_05a9d4a85ffbc57b9e04d60eb967271c.bindPopup(popup_99c53d5bd33d20c12d4d49f54abcfd43)
+        ;
+
+        
+    
+    
+            var marker_b6e3d5ef47357ebe39e42562694721fd = L.marker(
+                [44.2559, 5.531],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_17f5fafb0b2567368657bc3a8709209b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b6e3d5ef47357ebe39e42562694721fd.setIcon(icon_17f5fafb0b2567368657bc3a8709209b);
+        
+    
+        var popup_081f72c7bf53756b010341cb8937122a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8b724fcedebbb726ccf9a72fef0aa5e = $(`<div id="html_c8b724fcedebbb726ccf9a72fef0aa5e" style="width: 100.0%; height: 100.0%;">Supplier S5 (France)</div>`)[0];
+                popup_081f72c7bf53756b010341cb8937122a.setContent(html_c8b724fcedebbb726ccf9a72fef0aa5e);
+            
+        
+
+        marker_b6e3d5ef47357ebe39e42562694721fd.bindPopup(popup_081f72c7bf53756b010341cb8937122a)
+        ;
+
+        
+    
+    
+            var marker_86749ed1cf89169e23df7fd0efa568c4 = L.marker(
+                [51.385, 6.3885],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_7d931f9fb8923edc361baa14af660579 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_86749ed1cf89169e23df7fd0efa568c4.setIcon(icon_7d931f9fb8923edc361baa14af660579);
+        
+    
+        var popup_dc1ad12aca3af304e6c0fa9f4cb42baa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb934bf105464828edf1a34f4dfc5e4a = $(`<div id="html_cb934bf105464828edf1a34f4dfc5e4a" style="width: 100.0%; height: 100.0%;">Supplier S6 (Germany)</div>`)[0];
+                popup_dc1ad12aca3af304e6c0fa9f4cb42baa.setContent(html_cb934bf105464828edf1a34f4dfc5e4a);
+            
+        
+
+        marker_86749ed1cf89169e23df7fd0efa568c4.bindPopup(popup_dc1ad12aca3af304e6c0fa9f4cb42baa)
+        ;
+
+        
+    
+    
+            var marker_61d0c860f54270a9902e2a374a21e326 = L.marker(
+                [54.2334, 20.6096],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_ccb9d25f4dcdd0b8711c2eb322160644 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_61d0c860f54270a9902e2a374a21e326.setIcon(icon_ccb9d25f4dcdd0b8711c2eb322160644);
+        
+    
+        var popup_bb650212a4e103945e3103ef5aa8b804 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30ba4f0689a0f1a7be08ad2eae4d1400 = $(`<div id="html_30ba4f0689a0f1a7be08ad2eae4d1400" style="width: 100.0%; height: 100.0%;">Supplier S7 (Poland)</div>`)[0];
+                popup_bb650212a4e103945e3103ef5aa8b804.setContent(html_30ba4f0689a0f1a7be08ad2eae4d1400);
+            
+        
+
+        marker_61d0c860f54270a9902e2a374a21e326.bindPopup(popup_bb650212a4e103945e3103ef5aa8b804)
+        ;
+
+        
+    
+    
+            var marker_284311c5d611b70f3b81c8b228d607e6 = L.marker(
+                [36.6753, 111.1149],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_3d15cfec33f5bcb87b81550a3356d15b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_284311c5d611b70f3b81c8b228d607e6.setIcon(icon_3d15cfec33f5bcb87b81550a3356d15b);
+        
+    
+        var popup_a257f482d218ac6ee87c4db27d1bc820 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0da2121af9979c91766f26222577f9ca = $(`<div id="html_0da2121af9979c91766f26222577f9ca" style="width: 100.0%; height: 100.0%;">Supplier S8 (China)</div>`)[0];
+                popup_a257f482d218ac6ee87c4db27d1bc820.setContent(html_0da2121af9979c91766f26222577f9ca);
+            
+        
+
+        marker_284311c5d611b70f3b81c8b228d607e6.bindPopup(popup_a257f482d218ac6ee87c4db27d1bc820)
+        ;
+
+        
+    
+    
+            var marker_4ba845f78430a4a233605a4498ba5087 = L.marker(
+                [22.3193, 114.1694],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_0b4ed5e58c649f578bbd9c15e3e8cb9c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4ba845f78430a4a233605a4498ba5087.setIcon(icon_0b4ed5e58c649f578bbd9c15e3e8cb9c);
+        
+    
+        var popup_37a931fd3821b27aa05ee18a4189d86c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4154b8ff4c6cee86a3982e9f5dcf6292 = $(`<div id="html_4154b8ff4c6cee86a3982e9f5dcf6292" style="width: 100.0%; height: 100.0%;">Supplier S9 (China)</div>`)[0];
+                popup_37a931fd3821b27aa05ee18a4189d86c.setContent(html_4154b8ff4c6cee86a3982e9f5dcf6292);
+            
+        
+
+        marker_4ba845f78430a4a233605a4498ba5087.bindPopup(popup_37a931fd3821b27aa05ee18a4189d86c)
+        ;
+
+        
+    
+    
+            var marker_bcb0c0b4d4dc5184a96687ba77583cd4 = L.marker(
+                [40.3331, 7.6283],
+                {}
+            ).addTo(map_f7d4ea7454caeb5e69858c8a36530e4b);
+        
+    
+            var icon_181f997605f372be2e1f899de0ff5811 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bcb0c0b4d4dc5184a96687ba77583cd4.setIcon(icon_181f997605f372be2e1f899de0ff5811);
+        
+    
+        var popup_6b8d662b4325869def55e5540b6cdb7b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd3a75064200bf806d40680fc4b74c45 = $(`<div id="html_bd3a75064200bf806d40680fc4b74c45" style="width: 100.0%; height: 100.0%;">Supplier S10 (Italy)</div>`)[0];
+                popup_6b8d662b4325869def55e5540b6cdb7b.setContent(html_bd3a75064200bf806d40680fc4b74c45);
+            
+        
+
+        marker_bcb0c0b4d4dc5184a96687ba77583cd4.bindPopup(popup_6b8d662b4325869def55e5540b6cdb7b)
+        ;
+
+        
+    
+</script>
+</html>

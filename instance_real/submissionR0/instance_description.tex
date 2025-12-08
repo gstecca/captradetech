@@ -1,0 +1,50 @@
+
+\section{Instance Description}
+
+The instance models a cap-and-trade system for a steel supply chain composed of multiple facilities, suppliers, and customer areas distributed across Europe and Asia. Each facility can invest in one of four technology levels to reduce its CO$_2$ emissions. The technologies considered are:
+
+\begin{table}[h!]
+\centering
+\caption{Technology levels and associated emissions and costs}
+\label{tab:tech_levels}
+\begin{tabular}{|c|l|c|c|}
+\hline
+\textbf{Level} & \textbf{Technology} & \textbf{CO$_2$ Emissions (tons/unit)} & \textbf{Production Cost (€/ton)} \\
+\hline
+1 & Carbon-intensive BF & 1.8 & 500 \\
+2 & Blue Hydrogen       & 1.0 & 600 \\
+3 & Turquoise Hydrogen  & 0.6 & 700 \\
+4 & Green Hydrogen      & 0.1 & 850 \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent
+\textbf{Carbon-intensive BF (Blast Furnace)} represents the traditional steelmaking process using coke and coal, with emissions around 1.8--2.0 tons of CO$_2$ per ton of steel. \textbf{Blue Hydrogen} uses natural gas with carbon capture and storage (CCS), reducing emissions to approximately 1.0 ton CO$_2$/ton. \textbf{Turquoise Hydrogen} is produced using nuclear energy, resulting in lower emissions due to clean electricity, estimated at 0.6 tons CO$_2$/ton. \textbf{Green Hydrogen}, produced via electrolysis using renewable energy, achieves near-zero emissions, around 0.1 tons CO$_2$/ton.
+
+These values are consistent with recent literature on decarbonizing the steel industry, which emphasizes the potential of hydrogen-based steelmaking to reduce emissions by up to 90\% compared to traditional blast furnace methods~\cite{gu2023co2}.
+
+\begin{table}[h!]
+\centering
+\caption{Other key parameters}
+\label{tab:parameters}
+\begin{tabular}{|l|l|}
+\hline
+Transportation CO$_2$ emissions & 0.05 tons/unit \\
+Transportation cost             & 20 €/unit \\
+Transaction cost (CO$_2$)       & 50 €/ton \\
+$\alpha$ (revenue to GA)        & 20\% \\
+$\alpha'$ (reinvestment share)  & 50\% \\
+Facility capacity               & 25 tons/year \\
+Supplier capacity               & 40 tons/year \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent
+The time horizon is set to 10 years. Demand increases linearly from 250 to 340 units/year. The initial cap on emissions is set to 65,000 tons and decreases over time.
+
+\begin{thebibliography}{1}
+\bibitem{gu2023co2}
+Gu, Y., Pan, C., Sui, Y., Wang, B., Jiang, Z., Wang, C., \& Liu, Y. (2023). CO$_2$ emission accounting and emission reduction analysis of the steel production process based on the material-energy-carbon correlation effect. \textit{Environmental Science and Pollution Research}, 30, 124010--124027.
+\end{thebibliography}
