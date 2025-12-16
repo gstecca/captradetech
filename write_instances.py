@@ -2,7 +2,7 @@
 # Authors: Massimiliano Caramia, Anna Laura Pala, Giuseppe Stecca
 # Email: giuseppe.stecca@gmail.com
 
-from bilevel_params import *
+#from algorithms.bilevel_params import *
 import pandas as pd
 import json
 
